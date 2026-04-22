@@ -172,17 +172,30 @@ spring.jpa.show-sql=true
 
 ## ▶️ Projekt starten
 
-1. MySQL starten
+### Voraussetzungen
+- Java installiert
+- Maven installiert
+- MySQL installiert und gestartet
 
-2. Datenbank anlegen:
 
+### 1. MySQL starten
+Stelle sicher, dass dein MySQL-Server läuft.
+
+### 2. Datenbank anlegen
+Führe in MySQL folgenden Befehl aus:
+
+```sql
 CREATE DATABASE buchverwaltung;
+````
 
-3. Spring Boot starten:
 
+### 3. Anwendung starten
+
+Im Projektordner folgenden Befehl ausführen : 
 mvn spring-boot:run
 
-API läuft unter:
+### 4. API aufrufen
+Nach dem Start ist die API unter folgender Adresse erreichbar:
 
 http://localhost:8080/api/books
 
