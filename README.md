@@ -23,6 +23,7 @@ Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Ja
 - 📚 Bücher erstellen, lesen, aktualisieren und löschen (CRUD)
 
 - 🔍 Suche nach ID
+- 🔎 Suche nach Büchern (Titel und Autor)
 
 - 🛡️ Validierung aller Eingaben (Titel, Autor, ISBN, Preis, Erscheinungsjahr)
 
@@ -103,6 +104,27 @@ PUT /api/books/{id}
 
 DELETE /api/books/{id}
 
+🔎 Bücher nach Titel oder Autor suchen
+
+GET /api/books/suche?keyword=deinSuchbegriff
+
+### 🔍 Beispiel: Suche
+
+GET /api/books/suche?keyword=martin
+
+Antwort:
+
+```json
+
+ {
+  "id": 1,
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "isbn": "9780132350884",
+  "price": 29.99,
+  "publishedYear": 2008
+ }
+```
 -----------------------------------------------------------------------------
 ## 🧩 Validierung
 
