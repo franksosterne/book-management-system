@@ -85,6 +85,14 @@ public class BookService {
         bookRepository.deleteById(id);
     }
 
+    // Buch nach Titel oder Autor suchen
+    public List<BookResponse> searchBooks(String keyword) {
+        return bookRepository
+                .findByTitleContainingIgnoreCaseOrAuthorContainingIgnoreCase(keyword, keyword)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
     // Hilfsmethode: Entity -> Response DTO
     private BookResponse mapToResponse(Book book) {
         return new BookResponse(

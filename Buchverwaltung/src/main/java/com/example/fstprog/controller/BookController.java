@@ -55,4 +55,10 @@ public class BookController {
         bookService.deleteBook(id);
         return ResponseEntity.noContent().build();
     }
+
+    // buch nach Titel oder Autor  suchen
+    @GetMapping("/suche")
+    public ResponseEntity<List<BookResponse>> searchBooks(@RequestParam String keyword) {
+        return ResponseEntity.ok(bookService.searchBooks(keyword));
+    }
 }
