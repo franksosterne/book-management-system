@@ -1,0 +1,353 @@
+/* ===== ALLGEMEINE EINSTELLUNGEN ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GRUNDLAYOUT ===== */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+}
+
+.app {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+    padding: 35px;
+    border-radius: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.25);
+}
+
+.tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    opacity: 0.95;
+}
+
+/* ===== HAUPTLAYOUT ===== */
+.main-layout {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h2,
+.list-card h2 {
+    margin-bottom: 18px;
+    color: #0f172a;
+}
+/* ===== FORMULAR ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+    width: 100%;
+}
+
+.form-row .form-group {
+    min-width: 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #334155;
+}
+
+/* ===== EINGABEFELDER ===== */
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+/* ===== BUTTONS ===== */
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.primary:hover {
+    background: #4338ca;
+}
+
+.secondary {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* ===== TRENNLINIE ÜBER DEN FORMULAR-BUTTONS ===== */
+.form-footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.list-card {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.list-header h2 {
+    margin-bottom: 0;
+}
+
+.list-header p {
+    color: #64748b;
+    margin-top: 0;
+}
+
+.search-input {
+    width: 100%;
+    min-width: unset;
+}
+
+.search-group {
+    margin-top: 25px;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ===== MELDUNGEN ===== */
+.message {
+    padding: 13px 15px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.message.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.loading {
+    padding: 18px;
+    text-align: center;
+    background: #f1f5f9;
+    border-radius: 14px;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.book-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+    align-content: start;
+}
+
+/* --- LIGNE AU-DESSUS DES BOUTONS SUCHEN ET ALLE BÜCHER --- */
+.search-footer {
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.search-footer .btn {
+    background: #4f46e5;
+    color: white;
+    min-width: 150px;
+}
+
+.search-footer .btn:hover {
+    background: #4338ca;
+}
+
+.search-footer .btn:last-child {
+    min-width: 230px;
+}
+
+.book-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 18px;
+    background: #ffffff;
+    transition: 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+}
+
+.book-card h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    color: #475569;
+    margin-bottom: 7px;
+    font-size: 0.95rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.edit-btn {
+    background: #0ea5e9;
+    color: white;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 35px;
+    border-radius: 18px;
+    color: #64748b;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .search-footer {
+        flex-direction: column;
+    }
+
+    .search-footer .btn,
+    .search-footer .btn:last-child {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .form-footer {
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .pagination button {
+        border: none;
+        background: #e2e8f0;
+        color: #0f172a;
+        padding: 10px 14px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s ease;
+    }
+
+    .pagination button:hover {
+        background: #cbd5e1;
+    }
+
+    .pagination button.active {
+        background: #4f46e5;
+        color: white;
+    }
+
+
+}

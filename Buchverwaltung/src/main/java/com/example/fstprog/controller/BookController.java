@@ -2,6 +2,7 @@ package com.example.fstprog.controller;
 
 import com.example.fstprog.dto.reponse.BookResponse;
 import com.example.fstprog.dto.request.CreateBookRequest;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.fstprog.service.BookService;
 import jakarta.validation.Valid;
@@ -10,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/books")
 public class BookController {

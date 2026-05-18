@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buchverwaltung</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <div>
+            <h1>Buchverwaltung</h1>
+            <p class="subtitle">
+                Bücher einfach erstellen, suchen, bearbeiten und verwalten.
+            </p>
+        </div>
+    </header>
+
+    <main class="main-layout">
+
+        <!-- ===== FORMULAR ZUM HINZUFÜGEN VON BÜCHERN ===== -->
+        <section class="card form-card">
+            <h2 id="formTitle">Neues Buch hinzufügen</h2>
+
+            <form id="bookForm">
+                <input type="hidden" id="bookId">
+
+                <div class="form-group">
+                    <label for="title">Titel</label>
+                    <input type="text" id="title" placeholder="z. B. Clean Code">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Autor</label>
+                    <input type="text" id="author" placeholder="z. B. Robert C. Martin">
+                </div>
+
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" placeholder="z. B. 9780132350884">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Preis</label>
+                        <input type="number" id="price" step="0.01" placeholder="29.99">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publishedYear">Jahr</label>
+                        <input type="number" id="publishedYear" placeholder="2008">
+                    </div>
+                </div>
+
+                <!-- TRENNLINIE ÜBER DEN FORMULAR-BUTTONS -->
+                <div class="form-footer">
+                    <div class="button-row">
+                        <button type="submit" class="btn primary" id="submitBtn">
+                            Speichern
+                        </button>
+
+                        <button type="button" class="btn secondary hidden" id="cancelEditBtn">
+                            Abbrechen
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- ===== BÜCHERLISTE ===== -->
+        <section class="card list-card">
+
+            <div class="list-header">
+
+                <h2>Bücherübersicht</h2>
+
+                <div class="search-group">
+
+                    <label for="searchInput" class="sr-only">
+                        Suchfeld
+                    </label>
+
+                    <input type="text"
+                           id="searchInput"
+                           class="search-input"
+                           placeholder="Titel oder Autor suchen...">
+
+                </div>
+
+            </div>
+
+            <div id="messageBox" class="message hidden"></div>
+
+            <div id="loading" class="loading hidden">
+                Bücher werden geladen...
+            </div>
+
+            <div id="bookList" class="book-list"></div>
+
+            <div id="pagination" class="pagination"></div>
+
+
+            <div class="search-footer">
+
+                <button class="btn primary" id="searchBtn">
+                    Suchen
+                </button>
+
+                <button class="btn primary" id="showAllBtn">
+                    Alle Bücher anzeigen
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+</body>
+</html>
