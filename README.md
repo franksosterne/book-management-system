@@ -1,5 +1,6 @@
 ## 📘 Buchverwaltung – Spring Boot & MySQL
-Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Java, Spring Boot, MySQL und einer sauberen MVC‑Architektur.
+Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Java, Spring Boot, MySQL und MVC‑Architektur.
+Zusätzlich enthält das Projekt ein Frontend mit HTML, CSS und JavaScript für eine benutzerfreundliche Buchverwaltung.
 
 **Dieses Projekt demonstriert  Backend‑Entwicklung mit** :
 
@@ -19,11 +20,23 @@ Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Ja
 
 --------------------------------------------------------------------------
 
+## 📸 dashboard
+![Dashboard](frontend/images/dashboard.png)
+-------------------------------------------------------------------------
+
+
+
+
 ## 🚀 Features
 - 📚 Bücher erstellen, lesen, aktualisieren und löschen (CRUD)
 
 - 🔍 Suche nach ID
 - 🔎 Suche nach Büchern (Titel und Autor)
+- 🎨 Modernes responsives Frontend mit HTML, CSS und JavaScript 
+- 📄 Pagination (maximal 6 Bücher pro Seite)
+- ✏️ Bücher direkt im Frontend bearbeiten
+- 🗑️ Bücher direkt im Frontend löschen
+- 🔔 Benutzerfreundliche Erfolg- und Fehlermeldungen
 
 - 🛡️ Validierung aller Eingaben (Titel, Autor, ISBN, Preis, Erscheinungsjahr)
 
@@ -47,6 +60,9 @@ Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Ja
 | MySQL              | Relationale Datenbank      |
 | Jakarta Validation | Eingabevalidierung         |
 | Maven              | Build‑ und Dependency‑Tool |
+| HTML5              | Frontend-Struktur          |
+| CSS                | UI-Design                  |
+| JavaScript         | Dynamische Frontend-Logik  |
 
 
 
@@ -55,17 +71,31 @@ Ein vollständiges CRUD‑Backend zur Verwaltung von Büchern, entwickelt mit Ja
 
 
 ```text
-src/main/java/com/example/fstprog
+Buchverwaltung
 │
-├── controller        → REST‑Endpoints
-├── dto
-│   ├── request       → Eingabe‑DTOs (mit Validation)
-│   └── response      → Ausgabe‑DTOs (API‑Responses)
-├── entity            → JPA‑Entities
-├── exception         → Custom Exceptions + Global Handler
-├── repository        → JPA‑Repository Interfaces
-├── service           → Business‑Logik
-└── BuchverwaltungApplication.java
+├── frontend
+│   ├── images          → Screenshots / Frontend-Bilder
+│   ├── index.html      → Benutzeroberfläche
+│   ├── style.css       → Design und Layout
+│   └── script.js       → Frontend-Logik und API-Kommunikation
+│
+├── src/main/java/com/example/fstprog
+│   ├── controller      → REST-Endpoints
+│   ├── dto
+│   │   ├── request     → Eingabe-DTOs (mit Validation)
+│   │   └── response    → Ausgabe-DTOs (API-Responses)
+│   ├── entity          → JPA-Entities
+│   ├── exception       → Custom Exceptions + Global Handler
+│   ├── repository      → JPA-Repository Interfaces
+│   ├── service         → Business-Logik
+│   └── BuchverwaltungApplication.java
+│
+├── src/main/resources
+│   └── application.properties → Datenbank- und JPA-Konfiguration
+│
+├── pom.xml             → Maven-Konfiguration
+├── README.md           → Projektdokumentation
+
 ```
 ---------------------------------------------------------------------------
 ## 📡 API‑Endpoints
