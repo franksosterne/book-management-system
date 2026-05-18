@@ -251,6 +251,10 @@ Nach dem Start ist die API unter folgender Adresse erreichbar:
 
 http://localhost:8080/api/books
 
+### 5. Frontend starten
+Nach dem Start der Anwendung kann das Frontend geöffnet werden.
+Dafür einfach die Datei `frontend/index.html` im Browser starten.
+
 -----------------------------------------------------------------------------
 ## 👤 Autor
 **Frank  Sosterne Teumawe**
